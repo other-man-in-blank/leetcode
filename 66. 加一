@@ -1,11 +1,14 @@
 class Solution:
-    def plusOne(digits) :
-        nums_s = ''.join([str(x) for x in digits])   #先将其数组中的值转换为字符串，然后进行拼接 
-        nums = str(int(nums_s) + 1)  
-        
-        r = [int(x) for x in nums]   
-        return [0]*(len(digits)-len(r)) + r   #数组前面可能存在多个0，防止这种情况出现
-        
-#方法一：直观思路，先将其组合成数字，然后+1，再将其分解为数组输出
-#作者：3wMnEBDLkw
-#链接：https://leetcode-cn.com/problems/plus-one/solution/python3-66jia-yi-zhi-bai-jiang-jie-duo-chong-jie-f/
+    def plusOne(self, digits: List[int]) -> List[int]:
+        for i in range(len(digits)-1, -1, -1):
+            if digits[i] is not 9:
+                digits[i] += 1
+                return digits
+            else:
+                digits[i] = 0
+                if digits[0] is 0:
+                    digits.insert(0, 1)
+                    return digits
+
+#作者：821218213
+#链接：https://leetcode-cn.com/problems/plus-one/solution/python3-yi-ci-forxun-huan-jie-jue-wen-ti-by-821218/
