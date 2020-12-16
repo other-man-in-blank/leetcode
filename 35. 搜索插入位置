@@ -1,0 +1,7 @@
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        left = bisect.bisect_left(nums,target)
+        return left
+
+#作者：luo_luo
+#链接：https://leetcode-cn.com/problems/search-insert-position/solution/sou-su-cha-ru-wei-zhi-python3er-fen-cha-zhao-by-lu/
