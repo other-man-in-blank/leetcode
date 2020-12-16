@@ -1,0 +1,14 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n <= 2:
+            return n
+        a = 1
+        b = 2 
+        for i in range(3,n+1):
+            t = b
+            b = a + b
+            a = t
+        return b
+
+#作者：belinda
+#链接：https://leetcode-cn.com/problems/climbing-stairs/solution/wo-shi-yi-zhi-xiao-qing-wa-by-belinda/
