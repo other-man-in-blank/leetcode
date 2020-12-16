@@ -1,0 +1,11 @@
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        res_split = s.split(" ")
+        res_split.reverse()
+        for res_str in res_split:
+            if res_str:
+                return len(res_str)
+        return 0
+
+#作者：ba-di-2
+#链接：https://leetcode-cn.com/problems/length-of-last-word/solution/xiao-bai-de-jie-ti-si-lu-by-ba-di-2-2/
