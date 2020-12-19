@@ -1,0 +1,15 @@
+class Solution:
+    def islandPerimeter(self, grid: List[List[int]]) -> int:
+        res=0
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j]==1:
+                    res+=4
+                    if i-1>=0 and grid[i-1][j]==1:
+                        res-=2
+                    if j-1>=0 and grid[i][j-1]==1:
+                        res-=2
+        return res
+
+#作者：tian-dao-yao-xing
+#链接：https://leetcode-cn.com/problems/island-perimeter/solution/zhi-jie-bian-li-dai-ma-qing-xi-by-tian-dao-yao-xin/
