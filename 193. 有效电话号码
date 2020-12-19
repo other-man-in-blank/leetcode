@@ -1,0 +1,6 @@
+# Read from the file file.txt and output all valid phone numbers to stdout
+cat file.txt | grep -P "^(\([0-9]{3}\)\s|[0-9]{3}-)[0-9]{3}-[0-9]{4}$"
+
+
+#作者：dou-dou-jiang-1
+#链接：https://leetcode-cn.com/problems/valid-phone-numbers/solution/wo-du-mei-kan-dao-hou-mian-you-ge-kong-ge-by-dou-d/
